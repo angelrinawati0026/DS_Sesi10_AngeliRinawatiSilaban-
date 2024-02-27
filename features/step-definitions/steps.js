@@ -43,3 +43,8 @@ When(/^Angel click "(.*)"$/ , async (filter) => {
 Then(/^Angel should get home page show all product that have been sorted$/, async () => {
     await HomePage.validateSortingFilter()
 });
+
+//detail product
+When(/^Angel click product "(.*)" should get detail product properly$/ , async (nameProduct) => {
+    await HomePage.detailProduk(nameProduct)
+});
