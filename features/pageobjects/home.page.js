@@ -7,6 +7,7 @@ class HomePage extends Page {
     get pageFilter() { return $('#inventory_container.inventory_container'); }
     get productName () { return $('.inventory_item_name'); }
     productItem = (nameProduct) => $(`//div[text()="${nameProduct}"]`)
+    //productItem = (nameProduct) => $(`//a[.//div[text()="${nameProduct}"]]`);
     get iconBack () { return $('#back-to-products'); }
 
     async validateHomePage() {
@@ -29,7 +30,8 @@ class HomePage extends Page {
     async detailProduk(nameProduct) {
         await this.iconCart.waitForDisplayed();
         await this.productItem(nameProduct).click()
-        await browser.url(`/inventory-item.html?id=${await this.productItem(nameProduct).getAttribute('id')}`);
+        await expect(browser).toHaveUrl(`/inventory-item.html?id=${await this.productItem(nameProduct).getAttribute('id')}`);
+        
     }
 
     async buttonBack() {
