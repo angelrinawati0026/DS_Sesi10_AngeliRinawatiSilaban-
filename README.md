@@ -1,5 +1,5 @@
 # DS_Sesi10_AngeliRinawatiSilaban-
-# Web Automation using Webdriverio and Cucumber
+## Web Automation using Webdriverio and Cucumber
 
 ## Prerequisites
 
