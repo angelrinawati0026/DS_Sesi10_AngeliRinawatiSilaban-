@@ -48,3 +48,6 @@ Then(/^Angel should get home page show all product that have been sorted$/, asyn
 When(/^Angel click product "(.*)" should get detail product properly$/ , async (nameProduct) => {
     await HomePage.detailProduk(nameProduct)
 });
+When(/^Angel click button back to home$/, async () => {
+    await HomePage.buttonBack()
+});
